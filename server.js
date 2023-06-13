@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 
-const todoDb = require('./data/todo-db')
+const charactersDb = require('./data/characters-db')
 
 const app= express();
 
@@ -9,16 +9,16 @@ app.set('view engine', 'ejs');
 app.set('views',path.join(__dirname, 'views'));
 
 app.get('/', function(req, res) {
-    res.redirect('/todos');
+    res.redirect('/characters');
 });
 
 app.get('/home', function(req, res) {
     res.render('home');
 });
 
-app.get('./todos', function(req, res) {
-    const todos = todoDb.getAll();
-    res.render('todos/index', { todos });
+app.get('./characters', function(req, res) {
+    const characters = charactersDb.getAll();
+    res.render('characters/index', { characters });
 });
 
 app.listen(3000,function() {

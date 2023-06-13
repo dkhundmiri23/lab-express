@@ -1,11 +1,11 @@
-const todos = [
-    {todo: 'Feed Dogs', done: true},
-    {todo: 'Learn Express', done: false},
-    {todo: 'Buy Milk', done: false}
+const characters = [
+    {characters: 'rick', done: true},
+    {characters: 'morty', done: false},
+    {characters: 'summer', done: false}
   ];
 
   module.exports = {
     getAll: function() {
-        return todos;
+        return characters;
     }
   };
